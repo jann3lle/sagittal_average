@@ -1,0 +1,24 @@
+[33md8bc3eb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Makes the file Pep8 compliant and fixessome typos on docs
+[33meb09f01[m Simplifies the variables used with numpy
+[33me43df1c[m Adds defaults to argparser in a cleaner way
+[33m6b080f7[m Simplifies how the file is saved to a file
+[33m53a39b3[m Loads the file now with numpy, it's cleaner!
+[33m5a8faae[m Uses numpy function to save the file
+[33mc9241ed[m Adds some description and help to the arguments of the script
+[33m4b44ff6[m Uses now argparse - this allows me to only parse the output and kept the default input
+[33m95a65ee[m Adds defaults to function definition and fixes the logics with arguments
+[33mbaef879[m Uses numpy to calculate the average
+[33m8fc86a4[m With Numpy I can calculate the mean without to iterate over each column
+[33m2ef91e2[m The index of the inner loop can also be removed
+[33m004f457[m And the size of the planes are not needed anymore!
+[33m8905e26[m We don't need to iterate over the indices for each row but through the rows
+[33m7739ea2[m Adds a documentation to the function and fixes the file name parsing
+[33mb2af234[m Makes it general to the number of bins through both planes
+[33m45a2a4f[m Adds a way to parse the parameters
+[33mdcaf17b[m Uses NumPy as it's faster
+[33m6e93a23[m Adds a variable for the sagittal-horizontal blocks
+[33me2e3035[m Uses `with` to work with files
+[33me0c6bd3[m Having a function allows me to run it from other places
+[33macdaf90[m Creates variable to ease the change on coronal plane bins
+[33m9dc8a27[m Adds input and output data for future testing
+[33m8060385[m First version of my averaging program
