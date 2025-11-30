@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: sagittal_average
+Version: 0.1.0
+Summary: Charlene's sagittal average tool
+Requires-Python: >=3.10

@@ -1,12 +1,18 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "sagittal_average"
 version = "0.1.0"
+description = "Charlene's sagittal average tool"
+requires-python = ">=3.10"
 
-[tool.hatch.build.targets.wheel]
-packages = [
-  "src/sagittal_average",
-]
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sagittal_average = ["data/*.csv"]
