@@ -1,2 +1,18 @@
-/.pytest_cache
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# pytest
+.pytest_cache/
+
+# Distribution / packaging
 *.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.env/
