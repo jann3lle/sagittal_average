@@ -1,23 +1,33 @@
 import numpy as np
-import sys
-from sagittal_average import run_averages
 from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-tests = Path(__file__).parent 
-
-input = np.zeros((20, 20))
-input[-1, :] = 1
-np.savetxt("brain_sample.csv", input, fmt='%d', delimiter=',')
-
-# The expected result is all zeros, except the last one, it should be 1
-expected = np.zeros(20)
-expected[-1] = 1
-
-run_averages(file_input="brain_sample.csv",
-             file_output="brain_average.csv")
-
-result = np.loadtxt(tests / "brain_average.csv",  delimiter=',')
-np.testing.assert_array_equal(result, expected)
+from sagittal_average.sagittal_brain import run_averages
+import tempfile
 
 
+def test_run_averages():
+    # Use a temporary directory so tests don't pollute your repo
+    with tempfile.TemporaryDirectory() as tmpdir:
+        tmpdir = Path(tmpdir)
+
+        # Create the input dataset
+        data_input = np.zeros((20, 20))
+        data_input[-1, :] = 1
+
+        input_file = tmpdir / "brain_sample.csv"
+        output_file = tmpdir / "brain_average.csv"
+
+        # Save the input file
+        np.savetxt(input_file, data_input, fmt="%d", delimiter=",")
+
+        # Expected: all zeros except last position = 1
+        expected = np.zeros(20)
+        expected[-1] = 1
+
+        # Run your function
+        run_averages(file_input=input_file, file_output=output_file)
+
+        # Load the output
+        result = np.loadtxt(output_file, delimiter=",")
+
+        # Compare
+        np.testing.assert_array_equal(result, expected)
