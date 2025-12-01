@@ -16,3 +16,7 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 sagittal_average = ["data/*.csv"]
+
+# Experimenting with entry points
+[project.scripts]
+sagittal_average_run = "sagittal_average.command:main"

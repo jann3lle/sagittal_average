@@ -1,10 +1,12 @@
 pyproject.toml
 src/sagittal_average/__init__.py
+src/sagittal_average/command.py
 src/sagittal_average/input.py
 src/sagittal_average/sagittal_brain.py
 src/sagittal_average.egg-info/PKG-INFO
 src/sagittal_average.egg-info/SOURCES.txt
 src/sagittal_average.egg-info/dependency_links.txt
+src/sagittal_average.egg-info/entry_points.txt
 src/sagittal_average.egg-info/top_level.txt
 src/sagittal_average/data/brain_average.csv
 src/sagittal_average/data/brain_sample.csv
